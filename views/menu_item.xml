@@ -1,0 +1,9 @@
+
+<odoo>
+    <menuitem id="menu_data_import_root" name="Data Import" sequence="10" />
+    
+    <menuitem id="menu_data_import_wizard" name="Import XLSX Data" 
+              parent="menu_data_import_root" 
+              action="action_import_wizard" 
+              sequence="20" />
+</odoo>

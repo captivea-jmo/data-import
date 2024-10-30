@@ -1,0 +1,27 @@
+<odoo>
+    <record id="view_import_wizard_form" model="ir.ui.view">
+        <field name="name">import.wizard.form</field>
+        <field name="model">import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Import Data from XLSX">
+                <group>
+                    <field name="file" />
+                    <field name="model_id" />
+                    <field name="username" readonly="1" />
+                    <field name="password" password="True" placeholder="Enter your password" />
+                </group>
+                <footer>
+                    <button string="Import" type="object" name="action_import" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_import_wizard" model="ir.actions.act_window">
+        <field name="name">Import XLSX</field>
+        <field name="res_model">import.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
